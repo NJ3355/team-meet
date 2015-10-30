@@ -18,12 +18,13 @@ require_once 'session.php';
     $row = $result->fetch_array(MYSQLI_NUM);
 
     echo <<<_END
-  <pre>
-     Project Name $row[0]
+   <a href="projectpage.php"><div class="projectsClass">
+  
+     Project Name $row[0] <br/>
       Description $row[1]
             
-  </pre>
-
+  
+  </div></a>
 _END;
   }
   

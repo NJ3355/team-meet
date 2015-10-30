@@ -24,9 +24,8 @@
 			<h2>Team - Meet</h2>
 				<ul>
 					<a href="index.html"><li>Home</li></a>
-					<a href="projects.php"><li>My Teams</li></a>
-					<a href="projectpage.php"><li>Meet The Makers</li></a>
-					<a href="#"><li>Contact</li></a>
+					<a href="projects.php"><li>My Projects</li></a>
+					<a href="contact.html"><li>Contact</li></a>
 				</ul>
 	</div>
 	<div id="header">
@@ -38,7 +37,7 @@
                
 		</div>
 	</div>
-	<div id="content">
+	<div id="contentProject">
 		<div id="userContent">
 			<fieldset>
 	    		<legend><h1>	<?php echo $_SESSION['username'];?></h1></legend>
@@ -58,8 +57,8 @@
 					      
 					    </table>
 	    			</div>
-	    			<h2>Currently No Projects</h2>
-	    			<!--<?php //include "listprojects.php"; ?>-->
+	    			<h2>My Projects</h2>
+	    			<?php include "listprojects.php"; ?>
 	    		</div>
 				<div id="logout">
 					<button class="show">Create New Project</button>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<link rel="stylesheet" type="text/css" href="index.css"/>
+ <script type="text/javascript" src="slideshowfile.js"></script>
+ <link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+
+</head>
+<body>
+
+<div id="container">
+	<div id="navbar">
+			<h2>Team - Meet</h3>
+				<ul>
+					<a href="index.html"><li>Home</li></a>
+					<a href="projects.php"><li>My Teams</li></a>
+					<a href="contact.html"><li>Contact</li></a>
+				</ul>
+	</div>
+	<div id="header">
+		
+		<div id="slideshow">
+
+                <!--<img name="slide" src="landheader.jpg">-->
+                <img src ="header2.png" />
+               
+		</div>
+	</div>
+	<div id="contentContact">
+		<div id="contactPage">
+			<h1>Contact Us</h1>
+			<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+
+			<div id="contactInfo">
+				<h3>Team - Meet</h3>
+				<p>Farmingdale State College<br><br>2350 Broadhollow Road<br><br>NY 11753</p>
+
+			</div>
+			<br/>
+			<button id="clickMe">Email Us!</button>
+			<br/><br/>
+			<div id="contactForm">
+               <form action="contactForm.php" method="post">
+    			Your name<br>
+    			<input type="text" name="cf_name"><br>
+    			Your phone number<br>
+    			<input type="text" name="cf_phone"><br>
+    			Your e-mail<br>
+    			<input type="text" name="cf_email"><br>
+    			Message<br>
+    			<textarea name="cf_message" cols="40" rows="5"></textarea><br>
+				<input type="submit" value="Send">
+				<input type="reset" value="Clear">
+			</form>
+
+
+		</div>
+
+
+
+
+
+	</div>
+	<div id="footer">
+		Last Updated September 17, 2015
+	</div>
+
+
+</div>
+
+<script>
+$(document).ready(function(){
+$('#contactForm').hide();
+    $("#clickMe").click(function(){
+        $("#contactForm").slideToggle("slow");
+    });
+
+    
+});
+
+
+
+
+</script>
+
+
+</body>
+</html>
