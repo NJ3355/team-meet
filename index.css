@@ -93,7 +93,7 @@ body {
 #signup table{
 	height: 75px;
 	padding: 100px;
-	opacity: 0.9;
+	
 
 }
 
@@ -228,7 +228,7 @@ body {
 #newProject table{
 	height: 75px;
 	padding: 60px;
-	opacity: 0.9;
+
 }
 
 .hide {
@@ -256,7 +256,10 @@ body {
 	border-style: solid;
 	overflow: hidden;
 	float:left;
+	text-align: center;
 }
+
+
 
 #users h3 {
 	

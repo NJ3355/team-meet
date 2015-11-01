@@ -35,6 +35,7 @@ body {
 	height:540px;
 	background-color: #767169;
 	float: left;
+	text-align: center;
 }
 
 #chatbox {
@@ -140,6 +141,8 @@ body {
 
 		<div id="user">
 			<h2>Users</h2>
+			 <input type="text" name="user">
+			  <input type="submit" value="Add User">
 		</div>
 		<div id="projectBox">
 			<div id="projectName">
