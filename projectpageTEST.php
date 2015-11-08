@@ -116,6 +116,19 @@ body {
 	width:250px;
 	height:250px;
 }
+
+.posts {
+	border-top: solid;
+	border-bottom: solid;
+}
+
+.description {
+	text-align: center;
+}
+
+table {
+	margin: auto;
+}
 </style>
 
 </head>
@@ -152,18 +165,20 @@ body {
 
 			</div>
 			<div id="chatbox">
+				<?php include "listmessages.php"; ?>
 
 			</div>
 			<div id="typebox">
-				<textarea id="postContent" rows="1" cols="40">
-					   	
-						</textarea>
-						<button type="submit" onClick="x.post()">Submit</button>
+				<form action="post.php" method="post">
+				<input type="text" name="message"size="100"><br>
+				<input onCLick="x.post()" type="submit" value="Send">
+				</form>
 			</div>
 		</div>
 		
 		<div id="projectInfo">
 			<h2>Description</h2>
+			<?php include "listdescription.php"; ?>
 		</div>
 
 		<!--<div id="typebox">
@@ -207,7 +222,9 @@ body {
 <script>
 
 
-               
+
+
+
 jQuery(function($) {
     $( "#datePicker" ).datepicker();
  });

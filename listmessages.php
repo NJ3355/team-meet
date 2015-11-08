@@ -6,7 +6,7 @@ require_once 'session.php';
 
 
   
-  $query  = "SELECT * FROM images";
+  $query  = "SELECT * FROM messages";
   $result = $conn->query($query);
   if (!$result) die ("Database access failed: " . $conn->error);
 
@@ -18,20 +18,20 @@ require_once 'session.php';
     $row = $result->fetch_array(MYSQLI_NUM);
 
     echo <<<_END
-  <pre>
-     <img class="imageUpload" src="fileupload/$row[0]" />
-      
+   <div class="posts">
+  
+     $row[2]: $row[1]
             
-  </pre>
-
+  
+  </div>
 _END;
   }
   
   $result->close();
   $conn->close();
   
-  /*function get_post($conn, $var)
+ function get_post($conn, $var)
   {
     return $conn->real_escape_string($_POST[$var]);
-  }*/
+  }
 ?>
