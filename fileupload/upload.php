@@ -4,6 +4,8 @@
   $conn = new mysqli($db_hostname, $db_username, $db_password, $db_database);  if ($conn->connect_error) die($conn->connect_error);
 echo "<a href='../projectpagetest.php'>Return to project?</a>";
 
+$category = $_SESSION['selected_category'];
+$userName = $_SESSION['username'];
 $target_dir = "uploads/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
@@ -50,8 +52,8 @@ if ($uploadOk == 0) {
 
    
     
-    $query    = "INSERT INTO images (location) VALUES" .
-      "('$target_file')";
+    $query    = "INSERT INTO files (location, projectID, user) VALUES" .
+      "('$target_file', '$category', '$userName')";
     $result   = $conn->query($query);
 
     if (!$result) echo "INSERT failed: $query<br>" .

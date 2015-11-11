@@ -1,8 +1,11 @@
 <?php 
   require_once 'session.php';
 
-$_SESSION['selected_category'] =  $_GET['category'];
-  
+
+ $_SESSION['selected_category'] =  $_GET['category'];
+
+ 
+
 
 ?>
 
@@ -88,11 +91,6 @@ body {
 	margin:0;
 }
 
-#textarea {
-	width:90%;
-	height:35px;
-}
-
 #bottomContent {
 	width:100%;
 	height: 300px;
@@ -120,19 +118,6 @@ body {
 .imageUpload {
 	width:250px;
 	height:250px;
-}
-
-.posts {
-	border-top: solid;
-	border-bottom: solid;
-}
-
-.description {
-	text-align: center;
-}
-
-table {
-	margin: auto;
 }
 </style>
 
@@ -162,8 +147,7 @@ table {
 		<div id="user">
 			<h2>Users</h2>
 			 <input type="text" name="user">
-			  <input type="submit" value="Add User"><br><br>
-			  <?php include "listusers.php"; ?>
+			  <input type="submit" value="Add User">
 		</div>
 		<div id="projectBox">
 			<div id="projectName">
@@ -171,20 +155,18 @@ table {
 
 			</div>
 			<div id="chatbox">
-				<?php include "listmessages.php"; ?>
 
 			</div>
 			<div id="typebox">
-				<form action="post.php" method="post">
-				<input id="textarea" type="text" name="message"size="100">
-				<input  id="submit" onCLick="x.post()" type="submit" value="Send">
-				</form>
+				<textarea id="postContent" rows="1" cols="40">
+					   	
+						</textarea>
+						<button type="submit" onClick="x.post()">Submit</button>
 			</div>
 		</div>
 		
 		<div id="projectInfo">
 			<h2>Description</h2>
-			<?php include "listdescription.php"; ?>
 		</div>
 
 		<!--<div id="typebox">
@@ -228,9 +210,7 @@ table {
 <script>
 
 
-
-
-
+               
 jQuery(function($) {
     $( "#datePicker" ).datepicker();
  });

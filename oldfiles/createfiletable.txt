@@ -1,0 +1,8 @@
+"CREATE TABLE files (
+    fileID INT UNSIGNED AUTO_INCREMENT,
+    location VARCHAR(32) NOT NULL,
+    projectID int unsigned,
+    user VARCHAR(32),
+    PRIMARY KEY (fileID),
+    FOREIGN KEY (projectID) references projects(id)
+  )";

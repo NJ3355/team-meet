@@ -6,7 +6,7 @@ require_once 'session.php';
 
 
   
-  $query  = "SELECT * FROM projects";
+  $query  = "SELECT * FROM users";
   $result = $conn->query($query);
   if (!$result) die ("Database access failed: " . $conn->error);
 
@@ -17,23 +17,21 @@ require_once 'session.php';
     $result->data_seek($j);
     $row = $result->fetch_array(MYSQLI_NUM);
 
-    
     echo <<<_END
-   <a href="projectpage.php?category=$row[0]"><div class="projectsClass">
+   <div class="userList">
   
-     Project Name $row[1] <br/>
-      Description $row[2]
+     $row[1]
             
   
-  </div></a>
+  </div>
 _END;
   }
   
   $result->close();
   $conn->close();
   
-  function get_post($conn, $var)
+ /*function get_post($conn, $var)
   {
     return $conn->real_escape_string($_POST[$var]);
-  }
+  }*/
 ?>

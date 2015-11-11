@@ -1,7 +1,7 @@
 <?php 
   require_once 'session.php';
 
-
+$_SESSION['selected_category'] =  $_GET['category'];
   
 
 ?>
@@ -157,7 +157,8 @@ table {
 		<div id="user">
 			<h2>Users</h2>
 			 <input type="text" name="user">
-			  <input type="submit" value="Add User">
+			  <input type="submit" value="Add User"><br><br>
+			  <?php include "listusers.php"; ?>
 		</div>
 		<div id="projectBox">
 			<div id="projectName">
@@ -204,7 +205,7 @@ table {
     		<input type="submit" value="Upload Image" name="submit">
 		</form>
 
-		<?php include "listimages.php"; ?>
+		<?php include "listfiles.php"; ?>
 		</div>
 	</div>
 	
