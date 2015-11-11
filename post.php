@@ -9,6 +9,9 @@
   $conn = new mysqli($db_hostname, $db_username, $db_password, $db_database);  if ($conn->connect_error) die($conn->connect_error);
 //echo "<a href='projects.php'>Return to projects?</a>";
 
+  $projectID = $_SESSION['selected_category'];
+$userName = $_SESSION['username'];
+
 
 
 
@@ -20,8 +23,8 @@
     
    
     
-    $query    = "INSERT INTO messages (message, user) VALUES" .
-      "('$message', '$user')";
+    $query    = "INSERT INTO messages (message, user, projectID) VALUES" .
+      "('$message', '$userName', '$projectID')";
     $result   = $conn->query($query);
 
   	if (!$result) echo "INSERT failed: $query<br>" .
@@ -42,4 +45,4 @@
   }
 ?>
 
-<script type="text/javascript">location.href = 'projectpagetest.php';</script>
+<script type="text/javascript">location.href = "projectpage.php?category=<?php echo $projectID; ?>"</script>

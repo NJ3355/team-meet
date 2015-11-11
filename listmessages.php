@@ -3,10 +3,10 @@ require_once 'session.php';
   require_once 'login.php';
   $conn = new mysqli($db_hostname, $db_username, $db_password, $db_database);  if ($conn->connect_error) die($conn->connect_error);
 
-
+  $projectID = $_SESSION['selected_category'];
 
   
-  $query  = "SELECT * FROM messages";
+  $query  = "SELECT * FROM messages where projectID = $projectID";
   $result = $conn->query($query);
   if (!$result) die ("Database access failed: " . $conn->error);
 

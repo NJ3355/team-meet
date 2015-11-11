@@ -10,10 +10,12 @@
   if ($connection->connect_error) die($connection->connect_error);
 
   $query = "CREATE TABLE messages (
-    id INT UNSIGNED AUTO_INCREMENT,
+    messageID INT UNSIGNED AUTO_INCREMENT,
     message VARCHAR(140) NOT NULL,
     user VARCHAR(20) NOT NULL,
-    PRIMARY KEY (id)
+    projectID int unsigned,
+    PRIMARY KEY (messageID),
+    FOREIGN KEY (projectID) references projects(id)
   )";
   
   $result = $connection->query($query);
