@@ -1,0 +1,173 @@
+h1, h2 {
+    text-align: center;
+}
+
+body {
+    font-family: 'Arvo', serif;
+
+}
+
+
+
+#contentProjectPage {
+        width:100%;
+    overflow: hidden;
+   
+    background-color:;
+}
+#user {
+    width:20%;
+    height:540px;
+    background-color: #767169;
+    float: left;
+    text-align: center;
+    position: relative;
+}
+
+#chatbox {
+    width:100%;
+    height:455px;
+    background-color: #dddbd9;
+    float: left;
+    position: relative;
+    overflow: auto;
+   
+}
+
+#projectInfo {
+    width:20%;
+    height:540px;
+    background-color: #767169;
+    float: left;
+    position: relative;
+}
+
+#projectBox {
+    width:80%;
+    height:500px;
+    float:left;
+}
+
+#typebox {
+    background-color: white;
+    height:40px;
+    width: 99%;
+    clear:both;
+   
+    border-style: solid;
+}
+
+#projectName {
+    width: 100%;
+    float:left;
+    background-color: #dddbd9;
+}
+
+
+#typebox textarea {
+    width:80%;
+    float:left;
+}
+
+#typebox button {
+    margin:0;
+}
+
+#textarea {
+    width:90%;
+    height:35px;
+}
+
+#bottomContent, #privateMessages{
+    width:100%;
+    height: 430px;
+    background-color: ;
+}
+
+#myMessages {
+    overflow: scroll;
+}
+
+.bottomHalf {
+    height:100%;
+    width:49.8%;
+    text-align: center;
+    float:left;
+    overflow: auto;
+}
+
+.borderRight {
+    border-right: solid;
+   
+}
+
+
+
+.borderBottom {
+    border-bottom: solid;
+}
+/*#datepicker {
+    text-align: center;
+    margin:auto;
+    width:50%;
+}*/
+
+.imageUpload {
+    width:250px;
+    height:250px;
+}
+
+.posts {
+    border-top: solid;
+    border-bottom: solid;
+}
+
+.description {
+    text-align: center;
+}
+
+#deleteProject {
+    position: absolute;
+    bottom: 0;
+    padding-left: 27%;
+}
+
+  #projectheader {
+       background-color: #F2E5E5;
+       overflow: hidden;
+   }
+
+
+button {
+    float:right;
+}
+
+#edit {
+    width:19em;
+  
+    float:right;
+}
+#accordion h3 {
+    text-align: center;
+}
+
+table {
+  }
+
+  
+
+  input {
+    border: 5px solid white; 
+    -webkit-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    -moz-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    
+    background: rgba(255,255,255,0.5);
+    margin: 0 0 10px 0;
+}

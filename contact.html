@@ -2,13 +2,29 @@
 <html>
 <head>
 	<title></title>
-<link rel="stylesheet" type="text/css" href="index.css"/>
+<link rel="stylesheet" type="text/css" href="CSS/index.css"/>
  <script type="text/javascript" src="slideshowfile.js"></script>
  <link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
-
+<style>
+ input {
+    border: 5px solid white; 
+    -webkit-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    -moz-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    
+    background: rgba(255,255,255,0.5);
+    margin: 0 0 10px 0;
+}
+</style>
 </head>
 <body>
 
@@ -21,19 +37,26 @@
 					<a href="contact.html"><li>Contact</li></a>
 				</ul>
 	</div>
+	
 	<div id="header">
 		
 		<div id="slideshow">
 
                 <!--<img name="slide" src="landheader.jpg">-->
-                <img src ="header2.png" />
+                <img src ="images/tmlogo1.jpg" />
                
 		</div>
 	</div>
 	<div id="contentContact">
 		<div id="contactPage">
 			<h1>Contact Us</h1>
-			<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+			<p>We know how important it is to listen to users.  Often users will run into bugs or problems we do not find
+
+			in our testing, or find things to improve we might have missed.  So, if you have a question, or an idea for 
+
+			improving our website, please click on the link (above/below).
+
+			Thank you for helping us to improve this great tool.</p>
 
 			<div id="contactInfo">
 				<h3>Team - Meet</h3>
@@ -44,33 +67,33 @@
 			<button id="clickMe">Email Us!</button>
 			<br/><br/>
 			<div id="contactForm">
-               <form action="contactForm.php" method="post">
+               <form action="php/addhelpticket.php" method="post">
     			Your name<br>
-    			<input type="text" name="cf_name"><br>
+    			<input type="text" name="name"><br>
     			Your phone number<br>
-    			<input type="text" name="cf_phone"><br>
+    			<input type="text" name="phone"><br>
     			Your e-mail<br>
-    			<input type="text" name="cf_email"><br>
+    			<input type="text" name="email"><br>
     			Message<br>
-    			<textarea name="cf_message" cols="40" rows="5"></textarea><br>
+    			<textarea name="message" cols="40" rows="5"></textarea><br>
 				<input type="submit" value="Send">
 				<input type="reset" value="Clear">
 			</form>
 
 
 		</div>
-
+	</div>
 
 
 
 
 	</div>
 	<div id="footer">
-		Last Updated September 17, 2015
+		
 	</div>
 
 
-</div>
+
 
 <script>
 $(document).ready(function(){

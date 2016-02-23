@@ -2,13 +2,90 @@
 <html>
 <head>
 	<title></title>
-<link rel="stylesheet" type="text/css" href="index.css"/>
- <script type="text/javascript" src="slideshowfile.js"></script>
+<link rel="stylesheet" type="text/css" href="CSS/index.css"/>
+
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
  <link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/themes/overcast/jquery-ui.css" type="text/css" media="all" />
+ <link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.5.min.js" type="text/javascript"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js" type="text/javascript"></script>
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
 
+
+<script type="text/javascript">
+$(document).ready(function() {
+	
+	$('#signup').dialog(
+	{
+		resizeable: false,
+		draggable: false,
+		modal: true,
+		autoOpen: false,
+		show: 'clip',
+		hide: 'blind'
+	});
+	
+	$('#showSignup').click(function(){
+		$('#signup').dialog('open');		
+	});
+});
+	
+	function validate(form)
+	{
+		fail  = validateForename(form.fname.value)
+		fail += validateSurname(form.lname.value)
+		fail += validateUsername(form.user.value)
+		fail += validatePassword(form.pass.value)
+		fail += validatePassword(form.pass2.value)
+        fail += validateEmail(form.email.value)
+        if   (fail == "")   return true
+        else { alert(fail); return false }
+    }
+
+	function validateForename(field)
+	{
+		return (field == "") ? "No Forename was entered.\n" : ""
+	}
+      
+	function validateSurname(field)
+	{
+		return (field == "") ? "No Surname was entered.\n" : ""
+	}
+
+	function validateUsername(field)
+	{
+		if (field == "") return "No Username was entered.\n"
+		else if (field.length < 5)
+		return "Usernames must be at least 5 characters.\n"
+		else if (/[^a-zA-Z0-9_-]/.test(field))
+		return "Only a-z, A-Z, 0-9, - and _ allowed in Usernames.\n"
+		return ""
+	}
+
+	function validatePassword(field)
+	{
+		if (field == "") return "No Password was entered.\n"
+		else if (field.length < 6)
+		return "Passwords must be at least 6 characters.\n"
+		else if (! /[a-z]/.test(field) ||
+				! /[A-Z]/.test(field) ||
+				! /[0-9]/.test(field))
+		return "Passwords require one each of a-z, A-Z and 0-9.\n"
+		return ""
+	}
+
+
+	function validateEmail(field)
+	{
+		if (field == "") return "No Email was entered.\n"
+		else if (!((field.indexOf(".") > 0) && (field.indexOf("@") > 0)) ||	/[^a-zA-Z0-9.@_-]/.test(field))
+			return "The Email address is invalid.\n"
+		return ""
+	}	
+</script>
 </head>
 <body>
 
@@ -21,50 +98,51 @@
 					<a href="contact.html"><li>Contact</li></a>
 				</ul>
 	</div>
+	
 	<div id="header">
 		
 		<div id="slideshow">
 
                 <!--<img name="slide" src="landheader.jpg">-->
-                <img src ="header2.png" />
+                <img src ="images/tmlogo1.jpg" />
                
 		</div>
 	</div>
 	<div id="content">
 		<div id="about">
 			<div id="signup">
-				<div id="x">
-					X
-				</div>
-				    <table border="0" cellpadding="2" cellspacing="5" bgcolor="#eeeeee">
-				      <th colspan="2" align="center">Signup Form</th>
-				      <form method="post" action="adduser.php" onsubmit="return validate(this)">
-				        <tr><td>Forename</td>
-				          <td><input type="text" maxlength="32" name="fname"></td></tr>
-				        <tr><td>Surname</td>
-				          <td><input type="text" maxlength="32" name="lname"></td></tr>
-				        <tr><td>Username</td>
-				          <td><input type="text" maxlength="16" name="user"></td></tr>
-				        <tr><td>Password</td>
-				         	<td><input type="password" maxlength="12" name="pass"></td></tr>
-				         <tr><td>Retype Password</td>
-				         	<td><input type="password" maxlength="12" name="pass2"></td></tr>
-				        <tr><td>Email</td>
-				          <td><input type="text" maxlength="64" name="email"></td></tr>
-				        <tr><td colspan="2" align="center"><input type="submit" value="Signup"></td></tr>
-				      </form>
-				    </table>
-
-
+				<form method="post" action="php/adduser.php" onsubmit="return validate(this)">
+					<label for="fname">First Name</label><br />
+					<input type="text" maxlength="32" name="fname"><br />
+					<label for="lname">Last Name</label><br />
+					<input type="text" maxlength="32" name="lname"><br />
+					<label for="user">Username</label><br />
+					<input type="text" maxlength="16" name="user"><br />
+					<label for="pass">Password</label><br />
+					<input type="password" maxlength="12" name="pass"><br />
+					<label for="pass2">Confirm Password</label><br />
+					<input type="password" maxlength="12" name="pass2"><br />
+					<label for="email">Email</label><br />
+					<input type="text" maxlength="64" name="email"><br />
+					<button type="submit">Submit</button>
+				</form>
 			</div>
 			<div id="aboutText">
 			<h1>About Team - Meet</h1>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typr.</p>
+				<p>Team meet was dreamt up by web developers and a network tech.  In 2015, 4 students took a class in
+
+				which they had to dream up, build, and test a system that could be implemented in the real world.  The 
+
+				results of this is the website you are now on.  Team Meet is a revolutionary way for teams to come 
+
+				together and share ideas, share files, and talk in real time in one place.  Nowhere else does a website 
+
+				combine these ideas into one, easy to use, package.</p>
 			</div>
 		</div>
 		<div id="signInForm">
 			<div id="stylized" class="myform">
-				  <form id="form" name="form" method="post" action="checkuser.php">
+				  <form id="form" name="form" method="post" action="php/checkuser.php">
 				  <h1>Log-In</h1>
 				   
 				 
@@ -83,40 +161,9 @@
 				 
 				   </form>
 				   <br/>
-				 <button id="show">Sign-Up</button>
+				 <button id="showSignup">Sign-Up</button>
 		 </div>
 		</div>
-	</div>
-	<div id="theTeam">
-		<div class="member">
-			<h3>Atif</h3>
-			<h4>Role:</h4>
-			<p>Project Manager</p>
-			<img src="portrait.jpg" />
-
-		</div>
-		<div class="member">
-			<h3>Matt</h3>
-			<h4>Role:</h4>
-			<p>Project Analyst</p>
-			<img src="portrait.jpg" />
-
-		</div>
-		<div class="member">
-			<h3>Bilal</h3>
-			<h4>Role:</h4>
-			<p>Designer</p>
-			<img src="portrait.jpg" />
-
-		</div>
-		<div class="member">
-			<h3>Nick</h3>
-			<h4>Role:</h4>
-			<p>Lead Builder</p>
-			<img src="portrait.jpg" />
-
-		</div>
-
 	</div>
 	<div id="contact">
 		<div class="half">
@@ -132,93 +179,13 @@
 			</ul>
 		</div>
 	</div>
-	
+	</div>
 
 	<div id="footer">
-		Last Updated September 17, 2015
+	
 	</div>
 
 
 </div>
-
-<script>
-$( document ).ready(function() {
-    
-  $('#signup').hide(); 
-  $('#show').click(function() {
-    $('#signup').show();
-  });
-
- $('#x').click(function() {
-    $('#signup').hide();
-  });
-
- });
-
-
-
-
-
-</script>
-
-<script>
-      function validate(form)
-      {
-        fail  = validateForename(form.fname.value)
-        fail += validateSurname(form.lname.value)
-        fail += validateUsername(form.user.value)
-        fail += validatePassword(form.pass.value)
-        fail += validatePassword(form.pass2.value)
-        fail += validateEmail(form.email.value)
-
-        if   (fail == "")   return true
-        else { alert(fail); return false }
-      }
-
-      function validateForename(field)
-      {
-        return (field == "") ? "No Forename was entered.\n" : ""
-      }
-      
-      function validateSurname(field)
-      {
-        return (field == "") ? "No Surname was entered.\n" : ""
-      }
-
-      function validateUsername(field)
-      {
-        if (field == "") return "No Username was entered.\n"
-        else if (field.length < 5)
-          return "Usernames must be at least 5 characters.\n"
-        else if (/[^a-zA-Z0-9_-]/.test(field))
-          return "Only a-z, A-Z, 0-9, - and _ allowed in Usernames.\n"
-        return ""
-      }
-
-      function validatePassword(field)
-      {
-        if (field == "") return "No Password was entered.\n"
-        else if (field.length < 6)
-          return "Passwords must be at least 6 characters.\n"
-        else if (! /[a-z]/.test(field) ||
-                 ! /[A-Z]/.test(field) ||
-                 ! /[0-9]/.test(field))
-          return "Passwords require one each of a-z, A-Z and 0-9.\n"
-        return ""
-      }
-
-
-      function validateEmail(field)
-      {
-        if (field == "") return "No Email was entered.\n"
-          else if (!((field.indexOf(".") > 0) &&
-                     (field.indexOf("@") > 0)) ||
-                     /[^a-zA-Z0-9.@_-]/.test(field))
-            return "The Email address is invalid.\n"
-        return ""
-      }
-    </script>
-
-
 </body>
 </html>

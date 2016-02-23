@@ -1,0 +1,453 @@
+
+body {
+	margin: 0;
+	padding:0;
+}
+
+
+
+#header {
+	width:100%;
+	height:350px;
+	
+
+}
+
+#navbar {
+	width:100%;
+	height:3em;
+	background-color: #800000;
+	font-family: 'Arvo', serif;
+	
+
+}
+
+#navbar a {
+	color: white;
+}
+
+#navbar a:hover {
+	color: gray;
+}
+
+#navbar h2 {
+	display: inline;
+	padding-left: 2em;
+	color: white;
+}
+
+#navbar ul {
+	display: inline-block;
+	float: right;
+
+}
+
+#navbar li {
+	float:left;
+	list-style-type: none;
+	padding-right: 75px;
+}
+
+#slideshow {
+	
+	width:100%;
+	height:100%;
+	overflow:hidden; /* prevents huge images from showing outside our container */
+}
+	
+#slideshow img {
+	display:block; /* prevents gapping underneath images displayed inline or inline block, also allows margins */
+	height:95%; /* 100% height and width to fill up our #slideshow container */
+	width:45%;
+	margin:auto;
+}
+
+#content {
+	width:100%;
+	overflow: hidden;
+	height:500px;
+	background-color:;
+}
+
+#about {
+	width: 75%;
+	height:100%;
+	background-color: #F2E5E5;
+	text-align: center;
+	overflow: hidden;
+	float: left;
+	font-family: 'Arvo', serif;
+}
+
+
+
+#about p {
+	font-size: 1.5em;
+	margin-top: 3em;
+}
+
+#about h1 {
+	padding-top:15px;
+}
+
+
+#aboutText {
+	margin: auto;
+	width: 75%;
+}
+
+#signInForm {
+	width: 25%;
+	height:100%;
+	background-color: #EBF4FB;
+	
+	float: right;
+}
+
+#theTeam {
+	width:100%;
+	height:450px;
+	overflow: hidden;
+	background-color: #B8B5B5;
+}
+
+#theTeam h2{
+	text-align: center;
+	margin: 0;
+}
+
+.member {
+	width:25%;
+	height:100%;
+	float:left;
+	text-align: center;
+	font-family: 'Arvo', serif;
+}
+
+.member img {
+	width:200px;
+	height:200px;
+	margin: auto;
+	border-radius: 10px;
+}
+
+#contact {
+	width:100%;
+	height: 200px;
+	font-family: 'Arvo', serif;
+	background-color: #808080;
+	color:white;
+}
+
+.half {
+	width: 50%;
+	text-align: center;
+	float: left;
+	height: 100%;
+}
+
+.half ul {
+	display:inline-block;
+	padding:0;
+	
+}
+
+.half li {
+	float: left;
+	list-style-type: none;
+	padding-left: 50px;
+}
+
+.half i {
+	font-size: 3em;
+}
+
+
+
+
+
+
+
+
+/* PROJECTS PAGE */
+#contentProject {
+	width:100%;
+	overflow: hidden;
+	height:550px;
+	background-color:#808080;
+	font-family: 'Arvo', serif;
+}
+
+#userContent fieldset{
+	margin: auto;
+	height:500px;
+	width:100%;
+	background-color: #B8B5B5;
+	overflow: scroll;
+	
+}
+
+#userContent {
+	position: relative;
+	width:85%;
+	margin: auto;
+	background-color: ;
+}
+
+#myProjects {
+	text-align: center;
+}
+
+#myProjects table input {
+	height: 2em;
+
+}
+
+#myProjects img {
+	width:100px;
+	height:100px;
+}
+
+.delete {
+	margin-left:0;
+}
+tbody {
+	text-align: left;
+}
+.projectsClass {
+	width:31.33333333%;
+	
+	
+	display: inline-block;
+	float: left;
+	margin-top:2em;
+	margin-left:1em;
+}
+
+.delete {
+	margin-left: 0;
+}
+
+#logout {
+	position: absolute;
+	bottom:0;
+	right:0;
+	
+}
+
+.hide {
+	border-style: solid;
+	height: 20px;
+	width:60px;
+}
+
+
+/*PROJECT PAGE*/
+
+
+
+
+#project {
+	width: 100%;
+	height:100%;
+	text-align: center;
+	}
+
+
+#users {
+	width:15%;
+	height:90%;
+	border-style: solid;
+	overflow: hidden;
+	float:left;
+	text-align: center;
+}
+
+
+
+#users h3 {
+	
+	text-decoration: underline;
+}
+
+#contentProjectPage {
+        width:100%;
+    overflow: hidden;
+   
+    background-color:;
+}
+
+#projectContent {
+	height:90%;
+	width:75%;
+	border-style: solid;
+	float: right;
+	text-align: center;
+}
+
+.posts {
+	background-color: white;
+}
+
+
+.ui-datepicker {
+	margin: auto;
+}
+
+
+/*Contact Page*/
+
+#contentContact{
+		width:100%;
+	
+	color:white;
+	background-color:;
+
+}
+
+#contactPage {
+	background-color: #B8B5B5;
+	height:100%;
+	width:100%;
+	font-family: 'Arvo', serif;
+	text-align: center;
+}
+#clickMe {
+	margin-left: 0;
+}
+
+#contactPage h1{
+	text-align: center;
+	padding-top: 50px;
+	padding-bottom: 20px;
+}
+
+#contactInfo {
+	width:30%;
+	height:30%;
+	margin:auto;
+	background-color: ;
+}
+
+#contactPage p {
+	width:80%;
+	margin: auto;
+}
+
+
+
+
+
+
+#footer {
+	height:3em;
+	width:100%;
+	background-color: #800000;
+	text-align: center;
+	color:white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#stylized{
+   font-family:"Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
+   font-size:12px;
+ }
+
+ #stylized a {
+ 	text-align: center;
+ }
+
+#stylized p, h1, form, button{border:0; margin:0; padding:0;}
+ .spacer{clear:both; height:1px;}
+ /* ----------- My Form ----------- */
+ .myform{
+   margin:0 auto;
+   width:225px;
+   padding:4.5em;
+   height: 100%;
+ }
+ 
+   /* ----------- stylized ----------- */
+   #stylized{
+       
+       background:#ebf4fb;
+   }
+   #stylized h1 {
+       font-size:14px;
+       font-weight:bold;
+       margin-bottom:8px;
+       text-align: center;
+   }
+   #stylized p{
+       font-size:11px;
+       color:#666666;
+       margin-bottom:20px;
+       border-bottom:solid 1px #b7ddf2;
+       padding-bottom:10px;
+   }
+   #stylized label{
+       display:block;
+       font-weight:bold;
+       text-align:right;
+       width:140px;
+       float:left;
+   }
+   #stylized .small{
+       color:#666666;
+ display:block;
+       font-size:11px;
+       font-weight:normal;
+       text-align:right;
+       width:140px;
+   }
+   #stylized input{
+       float:left;
+       font-size:12px;
+       padding:4px 2px;
+       border:solid 1px #aacfe4;
+       width:200px;
+       height:2em;
+       margin:2px 0 20px 10px;
+   }
+    button{
+       clear:both;
+       margin-left:55px;
+       width:125px;
+       height:31px;
+       background:#666666 url(img/button.png) no-repeat;
+       text-align:center;
+       line-height:31px;
+       color:#FFFFFF;
+       font-size:11px;
+       font-weight:bold;
+   }
+   
+   
+   #all {
+	   width: 90%;
+	   margin: auto;
+	   padding: auto;
+   }
+   
+ .left {
+	 text-align: left;
+	 font-weight: bold;
+ }
