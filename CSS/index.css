@@ -1,7 +1,10 @@
 
+
 body {
-	margin: 0;
-	padding:0;
+box-sizing: border-box;
+}
+*, *:before, *:after {
+box-sizing: inherit;
 }
 
 html, body, div, span, applet, object, iframe,
@@ -47,6 +50,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
 
 
 
@@ -112,6 +116,7 @@ table {
 	overflow: hidden;
 	position: relative;
 	background-color:;
+
 }
 
 
@@ -146,6 +151,7 @@ table {
 
 #about h1 {
 	padding-top:15px;
+	font-size: 2em;
 }
 
 
@@ -208,6 +214,13 @@ table {
 	color:white;
 }
 
+#contact h2 {
+	font-size: 2em;
+	padding:.3em;
+}
+
+
+
 .half {
 	width: 50%;
 	text-align: center;
@@ -245,6 +258,10 @@ table {
 	height:550px;
 	background-color:#808080;
 	font-family: 'Arvo', serif;
+}
+
+#contentProject h1, #contentProject h2 {
+	font-size: 2em;
 }
 
 #userContent fieldset{
@@ -335,7 +352,7 @@ tbody {
 
 
 #users h3 {
-	
+	font-size: 2em;
 	text-decoration: underline;
 }
 
@@ -376,7 +393,7 @@ tbody {
 
 #contactPage {
 	background-color: #B8B5B5;
-	height:100%;
+	
 	width:100%;
 	font-family: 'Arvo', serif;
 	text-align: center;
@@ -389,13 +406,19 @@ tbody {
 	text-align: center;
 	padding-top: 50px;
 	padding-bottom: 20px;
+	font-size: 2em;
 }
 
 #contactInfo {
 	width:30%;
-	height:30%;
+	
 	margin:auto;
 	background-color: ;
+}
+
+#contactInfo h3 {
+	padding:1em;
+	font-size: 1.5em;
 }
 
 #contactPage p {
@@ -414,6 +437,14 @@ tbody {
 	background-color: #800000;
 	text-align: center;
 	color:white;
+	
+}
+
+#wholeFooter {
+	
+	bottom:0;
+	width:100%;
+	position: absolute;
 }
 
 
@@ -449,9 +480,9 @@ tbody {
  /* ----------- My Form ----------- */
  .myform{
    margin:0 auto;
-   width:225px;
-   padding:4.5em;
-   height: 100%;
+   
+   padding:5.5em;
+   
  }
  
    /* ----------- stylized ----------- */
@@ -493,7 +524,7 @@ tbody {
        padding:4px 2px;
        border:solid 1px #aacfe4;
        width:200px;
-       height:2em;
+       height:2.3em;
        margin:2px 0 20px 10px;
    }
     button{
