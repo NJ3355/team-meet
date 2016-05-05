@@ -66,7 +66,7 @@ $( document ).ready(function() {
 					<a href="index.html"><li>Home</li></a>
 					<a href="projects.php"><li>My Projects</li></a>
 					<a href="contact.html"><li>Contact</li></a>
-					<a href="userprofile.php"><li>User Profile</li></a>
+					<!--<a href="userprofile.php"><li>User Profile</li></a>-->
 					<a href="php/logout.php"><li>Logout</li></a>
 				</ul>
 	</div>

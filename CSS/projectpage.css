@@ -21,6 +21,11 @@ h1 {
     padding:.5em;
 }
 
+h2 {
+    font-size: 2em;
+    padding:.5em;
+}
+
 #user {
     width:20%;
     height:540px;
@@ -32,7 +37,7 @@ h1 {
 
 #chatbox {
     width:100%;
-    height:455px;
+    height:440px;
     background-color: #dddbd9;
     float: left;
     position: relative;
@@ -89,6 +94,8 @@ h1 {
     height: 430px;
     background-color: ;
 }
+
+
 
 #myMessages {
     overflow: scroll;

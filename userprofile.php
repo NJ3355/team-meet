@@ -69,7 +69,7 @@ $( document ).ready(function() {
 	
 	<div id="header">
 		<div id="slideshow">
-			<img src ="images/tmlogo1.jpg" />   
+			<img src ="images/team.jpg" />   
 		</div>
 	</div>
 	

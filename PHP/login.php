@@ -5,7 +5,7 @@
 
 <?php 
 	$db_hostname = 'localhost';
-	$db_database = 'teammeet';
+	$db_database = 'teammet';
 	$db_username = 'root';
 	$db_password = '';
 ?>

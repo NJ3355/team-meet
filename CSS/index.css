@@ -1,11 +1,6 @@
 
 
-body {
-box-sizing: border-box;
-}
-*, *:before, *:after {
-box-sizing: inherit;
-}
+
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -83,11 +78,13 @@ table {
 	display: inline;
 	padding-left: 2em;
 	color: white;
+	font-size: 1.3em;
 }
 
 #navbar ul {
 	display: inline-block;
 	float: right;
+	font-size: 1.3em;
 
 }
 
@@ -107,7 +104,7 @@ table {
 #slideshow img {
 	display:block; /* prevents gapping underneath images displayed inline or inline block, also allows margins */
 	 /* 100% height and width to fill up our #slideshow container */
-	
+	height:475px;
 	margin:auto;
 }
 
@@ -116,7 +113,9 @@ table {
 	overflow: hidden;
 	position: relative;
 	background-color:;
-
+	border-style: solid;
+	border-width: 1px;
+	
 }
 
 
@@ -128,7 +127,11 @@ table {
 	text-align: center;
 	overflow: hidden;
 	float: left;
-	font-family: 'Arvo', serif;
+	font-family: 'Josefin Slab', serif;
+
+	
+	
+	
 }
 
 #about:before {
@@ -146,7 +149,7 @@ table {
 
 #about p {
 	font-size: 1.5em;
-	margin-top: 3em;
+	margin-top: 1em;
 }
 
 #about h1 {
@@ -157,18 +160,19 @@ table {
 
 #aboutText {
 	margin: auto;
-	width: 75%;
+	width: 80%;
 }
 
 #signInForm {
 	width: 25%;
 	height:100%;
 	background-color: inherit;
-	
 	float: right;
+	border-left-style: solid;
+border-width: 1px;
 }
 
-#signInForm:before {
+#signInForm:after {
  	position: absolute;
     content: '';
     top: 0;
@@ -212,6 +216,8 @@ table {
 	font-family: 'Arvo', serif;
 	background-color: #808080;
 	color:white;
+	background-image: url("../images/tile.jpg");
+
 }
 
 #contact h2 {
@@ -392,10 +398,10 @@ tbody {
 }
 
 #contactPage {
-	background-color: #B8B5B5;
 	
+	background-image: url("../images/tile.jpg");
 	width:100%;
-	font-family: 'Arvo', serif;
+	font-family: 'Josefin Slab', serif;
 	text-align: center;
 }
 #clickMe {
@@ -406,7 +412,7 @@ tbody {
 	text-align: center;
 	padding-top: 50px;
 	padding-bottom: 20px;
-	font-size: 2em;
+	font-size: 2.5em;
 }
 
 #contactInfo {
@@ -422,8 +428,9 @@ tbody {
 }
 
 #contactPage p {
-	width:80%;
+	width:65%;
 	margin: auto;
+	font-size: 1.5em;
 }
 
 
@@ -437,6 +444,8 @@ tbody {
 	background-color: #800000;
 	text-align: center;
 	color:white;
+
+
 	
 }
 
@@ -451,12 +460,14 @@ tbody {
 
 
 
-
-
-
-
-
-
+body {
+	margin: 0;
+	padding:0;
+box-sizing: border-box;
+}
+*, *:before, *:after {
+box-sizing: inherit;
+}
 
 
 
@@ -480,8 +491,9 @@ tbody {
  /* ----------- My Form ----------- */
  .myform{
    margin:0 auto;
-   
-   padding:5.5em;
+   width:320px;
+   padding:4.5em;
+   height:100%;
    
  }
  
@@ -524,7 +536,7 @@ tbody {
        padding:4px 2px;
        border:solid 1px #aacfe4;
        width:200px;
-       height:2.3em;
+       height:2em;
        margin:2px 0 20px 10px;
    }
     button{
