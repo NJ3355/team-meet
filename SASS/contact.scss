@@ -1,0 +1,51 @@
+#contentContact{
+	width:100%;
+	color:white;
+
+	#contactPage {
+		background-image: url("../images/tile.jpg");
+		width:100%;
+		font-family: 'Josefin Slab', serif;
+		text-align: center;
+
+			h1{
+			text-align: center;
+			padding-top: 50px;
+			padding-bottom: 20px;
+			font-size: 2.5em;
+		}
+
+			p {
+			width:65%;
+			margin: auto;
+			font-size: 1.5em;
+		}
+
+			button{
+		       clear:both;
+		       margin-left:55px;
+		       width:125px;
+		       height:31px;
+		       background:#666666 url(img/button.png) no-repeat;
+		       text-align:center;
+		       line-height:31px;
+		       color:#FFFFFF;
+		       font-size:11px;
+		       font-weight:bold;
+		       margin:auto;
+		   }
+
+			#contactInfo {
+				width:30%;
+				margin:auto;
+			
+			}
+
+			#contactInfo h3 {
+				padding:1em;
+				font-size: 1.5em;
+			}
+
+	}
+
+}

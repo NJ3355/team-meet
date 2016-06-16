@@ -9,99 +9,16 @@ $username = $_SESSION['username'];
 <html>
 <head>
 <title></title>
-<link rel="stylesheet" type="text/css" href="CSS/index.css"/>
+<link rel="stylesheet" type="text/css" href="CSS/indexsass.css">
+<link rel="stylesheet" type="text/css" href="CSS/userprofilesass.css">
 <link rel="stylesheet" type="text/css" href="CSS/jquery-ui.min.css"/>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Josefin+Slab:400,700' rel='stylesheet' type='text/css'>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script type="text/javascript" src="JavaScript/jquery-ui.min.js"></script>
-<script type="text/javascript">
-$( document ).ready(function() {
-    
-  $('#edit').dialog(
-	{
-		resizeable: false,
-		draggable: false,
-		modal: true,
-		autoOpen: false,
-		show: 'clip',
-		hide: 'blind'
-	});
-	
-	$('#showEdit').click(function(){
-		$('#edit').dialog('open');		
-	});
 
- });
 
-</script>
-<style>
-	#userProfile {
-		width: 80%;
-		margin: auto;
-		padding: auto;
-		overflow:hidden;
-		
-	}
-	table {
-		margin: auto;
-		padding: auto;
-	}
-	td {
-		text-align: center;
-	}
-
-	#buttonWrapper {
-		margin:auto;
-	}
-	button {
-		margin: auto;
-	}
-
-	h1 {
-		font-size:2.5em;
-		display: inline-block;
-		margin-left: 1em;
-	}
-
-	img {
-		width:254px;
-		height:200px;
-	}
-
-	#container {
-		background-image: url("images/tile.jpg");
-		min-height: 650px;
-		color: white;
-	}
-
-	#userHeader {
-		width:80%;
-		margin-top:1em;
-	    display:flex;
-        align-items: center;
-        justify-content: center;
-	}
-
-	#userInfo {
-
-		width:25%;
-		margin: auto;
-		margin-top:3em;
-
-	}
-
-	#userInfo li {
-		margin-bottom: 2em;
-
-	}
-
-	.info {
-		font-size: 2em;
-	}
-
-</style>
 </head>
 <body>
 
@@ -154,5 +71,27 @@ $( document ).ready(function() {
 	<div id="footer">
 		
 	</div>
+
+
+<script type="text/javascript">
+$( document ).ready(function() {
+    
+  $('#edit').dialog(
+	{
+		resizeable: false,
+		draggable: false,
+		modal: true,
+		autoOpen: false,
+		show: 'clip',
+		hide: 'blind'
+	});
+	
+	$('#showEdit').click(function(){
+		$('#edit').dialog('open');		
+	});
+
+ });
+
+</script>
 </body>
 </html>

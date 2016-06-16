@@ -1,0 +1,45 @@
+#container {
+  background-image: url("../images/tile.jpg");
+  min-height: 850px;
+  color: white; }
+  #container h1 {
+    font-size: 2.5em;
+    display: inline-block;
+    margin-left: 1em; }
+  #container button {
+    clear: both;
+    margin-left: 55px;
+    width: 125px;
+    height: 31px;
+    background: #666666 url(img/button.png) no-repeat;
+    text-align: center;
+    line-height: 31px;
+    color: #FFFFFF;
+    font-size: 11px;
+    font-weight: bold;
+    margin: auto; }
+
+#userProfile {
+  width: 80%;
+  margin: auto;
+  padding: auto;
+  overflow: hidden; }
+  #userProfile #userHeader {
+    width: 80%;
+    margin-top: 5em;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  #userProfile #userInfo {
+    width: 25%;
+    margin: auto;
+    margin-top: 3em; }
+    #userProfile #userInfo li {
+      margin-bottom: 2em; }
+  #userProfile img {
+    width: 254px;
+    height: 200px; }
+  #userProfile .info {
+    font-size: 2em; }
+
+/*# sourceMappingURL=userprofilesass.css.map */
