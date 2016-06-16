@@ -1,0 +1,140 @@
+@import 'reset';
+
+
+
+body {
+	margin: 0;
+	padding:0;
+box-sizing: border-box;
+}
+*, *:before, *:after {
+box-sizing: inherit;
+}
+
+
+#navbar {
+	width:100%;
+	padding:1em;
+	background-color: #800000;
+	font-family: 'Josefin Slab', serif;
+	overflow: hidden;
+	
+	a {
+	color: white;
+
+		&:hover {
+			color: gray;
+		}
+
+	}
+
+
+	h2 {
+		display: inline;
+		padding-left: 2em;
+		color: white;
+		font-size: 1.3em;
+	}
+
+	ul {
+		display: inline-block;
+		float: right;
+		font-size: 1.3em;
+
+		li {
+		float:left;
+		list-style-type: none;
+		padding-right: 75px;
+		}
+
+	}
+
+
+
+}
+
+
+
+#slideshow {
+	width:100%;
+	overflow:hidden; 
+
+		img {
+		display:block; /* prevents gapping underneath images displayed inline or inline block, also allows margins */
+		 /* 100% height and width to fill up our #slideshow container */
+		height:475px;
+		margin:auto;
+	}
+}
+
+
+#contentProject {
+	width:100%;
+	overflow: hidden;
+	min-height: 800px;
+	background-color:#808080;
+	font-family: 'Arvo', serif;
+	background-image: url("../images/tile.jpg");
+	overflow: hidden;
+
+		#button {
+			margin: auto;
+			padding: 1em;
+			width:168px;
+		}
+
+		.title {
+			font-size: 4em;
+			color: white;
+			text-align: center;
+			padding-top:.5em;
+		}
+
+		h2{
+			@extend .title;
+		}
+
+
+}
+
+
+
+#userContent {
+	position: relative;
+	width:85%;
+	text-align: center;
+	margin: auto;
+
+	.projectsClass {
+		width: 28.333333%;
+		display: inline-block;
+		margin: 1em;
+		border-style: solid;
+	    border-width: 2px;
+
+	    	a {
+			text-decoration: none;
+			color:gray;
+		}
+	}
+		
+	
+
+}
+
+
+
+
+
+
+
+#footer {
+	padding:1.5em;
+	width:100%;
+	background-color: #800000;
+	text-align: center;
+	color:white;
+
+
+	
+}

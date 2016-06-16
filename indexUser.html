@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title></title>
-<link rel="stylesheet" type="text/css" href="CSS/indexsass.css"/>
+<link rel="stylesheet" type="text/css" href="CSS/index.css"/>
 
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
  <link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
@@ -14,112 +14,6 @@
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <link href='https://fonts.googleapis.com/css?family=Josefin+Slab:400,700' rel='stylesheet' type='text/css'>
 
-
-
-
-</head>
-<body>
-
-<div id="container">
-	<div id="navbar">
-			<h2>Team - Meet</h2>
-				<ul>
-					<a href="index.html"><li>Home</li></a>
-					<a href="projects.php"><li>My Projects</li></a>
-					<a href="contact.html"><li>Contact</li></a>
-				</ul>
-	</div>
-	
-	<div id="header">
-		
-		<div id="slideshow">
-
-                <!--<img name="slide" src="landheader.jpg">-->
-                <img src ="images/team.jpg" />
-               
-		</div>
-	</div>
-	<div id="content">
-		<div id="about">
-			<div id="signup">
-				<form method="post" action="php/adduser.php" onsubmit="return validate(this)">
-					<label for="fname">First Name</label><br />
-					<input type="text" maxlength="32" name="fname"><br />
-					<label for="lname">Last Name</label><br />
-					<input type="text" maxlength="32" name="lname"><br />
-					<label for="user">Username</label><br />
-					<input type="text" maxlength="16" name="user"><br />
-					<label for="pass">Password</label><br />
-					<input type="password" maxlength="12" name="pass"><br />
-					<label for="pass2">Confirm Password</label><br />
-					<input type="password" maxlength="12" name="pass2"><br />
-					<label for="email">Email</label><br />
-					<input type="text" maxlength="64" name="email"><br />
-					<button type="submit">Submit</button>
-				</form>
-			</div>
-			<div id="aboutText">
-			<h1>About Us</h1>
-
-				<p>Team - Meet is a website built with the objective of helping people collaborate on team-oriented projects more efficiently.
-					Many times people are assigned group projects but cannot always meet in person. This site allows people to login to a
-					secure system that assists users in collaborating ideas.</p><p> After signing up, a user has access to creating a project. A project is completely 
-					private to the person who created it unless he or she invites another user into this specific project.
-					Once the project is created they can access the core features of Team - Meet. Here you can use the message board, private messaging, file sharing and more. 
-					The site is currently undergoing a design overhaul so things are subject to change. Please send us feedback by filling out the form on your contact page. </p>
-			</div>
-		</div>
-		<div id="signInForm">
-			<div id="stylized" class="myform">
-				  <form id="form" name="form" method="post" action="php/checkuser.php">
-				  <h1>Log-In</h1>
-				   
-				 
-				     <label>Username
-				 <span class="small">Type Username</span>
-				   </label>
-				 <input type="text" name="username" id="name" />
-				 
-				 <label>Password
-				 <span class="small">Type Password</span>
-				   </label>
-				 <input type="password" name="password" id="email" />
-				 
-				     <button  type="submit">Sign-In</button>
-				 <div class="spacer"></div>
-				 
-				   </form>
-				   <br/>
-				 <button id="showSignup">Sign-Up</button>
-		 </div>
-		</div>
-	</div>
-	<div id="contact">
-		<div class="half">
-			<h2>Location</h2>
-				<p>Farmingdale State College<br>2350 Broadhollow Road<br>NY 11753</p>
-		</div>
-		<div class="half">
-			<h2>Social Media</h2>
-			<ul>
-				<li><i class="fa fa-facebook-official"></i></li>
-				<li><i class="fa fa-instagram"></i></li>
-				<li><i class="fa fa-twitter-square"></i></li>
-			</ul>
-		</div>
-	</div>
-	
-	
-
-	<div id="footer">
-	
-	</div>
-
-	
-    
-
-
-</div>
 
 
 <script type="text/javascript">
@@ -193,5 +87,88 @@ $(document).ready(function() {
 		return ""
 	}	
 </script>
+</head>
+<body>
+
+<div id="container">
+	<div id="navbar">
+			<h2>Team - Meet</h2>
+				<ul>
+					<a href="indexUser.html"><li>Home</li></a>
+					<a href="projects.php"><li>My Projects</li></a>
+					<a href="contact.html"><li>Contact</li></a>
+					<a href="userprofile.php"><li>User Profile</li></a>
+					<a href="php/logout.php"><li>Logout</li></a>
+					
+				</ul>
+	</div>
+	
+	<div id="header">
+		
+		<div id="slideshow">
+
+                <!--<img name="slide" src="landheader.jpg">-->
+                <img src ="images/team.jpg" />
+               
+		</div>
+	</div>
+	<div id="content">
+		<div id="aboutUser">
+			<div id="signup">
+				<form method="post" action="php/adduser.php" onsubmit="return validate(this)">
+					<label for="fname">First Name</label><br />
+					<input type="text" maxlength="32" name="fname"><br />
+					<label for="lname">Last Name</label><br />
+					<input type="text" maxlength="32" name="lname"><br />
+					<label for="user">Username</label><br />
+					<input type="text" maxlength="16" name="user"><br />
+					<label for="pass">Password</label><br />
+					<input type="password" maxlength="12" name="pass"><br />
+					<label for="pass2">Confirm Password</label><br />
+					<input type="password" maxlength="12" name="pass2"><br />
+					<label for="email">Email</label><br />
+					<input type="text" maxlength="64" name="email"><br />
+					<button type="submit">Submit</button>
+				</form>
+			</div>
+			<div id="aboutTextUser">
+			<h1>About Us</h1>
+
+				<p>Team - Meet is a website built with the objective of helping people collaborate on team-oriented projects more efficiently.
+					Many times people are assigned group projects but cannot always meet in person. This site allows people to login to a
+					secure system that assists users in collaborating ideas.</p><p> After signing up, a user has access to creating a project. A project is completely 
+					private to the person who created it unless he or she invites another user into this specific project.
+					Once the project is created they can access the core features of Team - Meet. Here you can use the message board, private messaging, file sharing and more. 
+					The site is currently undergoing a design overhaul so things are subject to change. Please send us feedback by filling out the form on your contact page. </p>
+			</div>
+		</div>
+		
+	</div>
+	<div id="contact">
+		<div class="half">
+			<h2>Location</h2>
+				<p>Farmingdale State College<br>2350 Broadhollow Road<br>NY 11753</p>
+		</div>
+		<div class="half">
+			<h2>Social Media</h2>
+			<ul>
+				<li><i class="fa fa-facebook-official"></i></li>
+				<li><i class="fa fa-instagram"></i></li>
+				<li><i class="fa fa-twitter-square"></i></li>
+			</ul>
+		</div>
+	</div>
+	
+	
+
+	<div id="footer">
+	
+	</div>
+
+	
+    
+
+
+</div>
 </body>
 </html>

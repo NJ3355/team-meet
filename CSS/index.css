@@ -60,7 +60,7 @@ table {
 	width:100%;
 	padding:1em;
 	background-color: #800000;
-	font-family: 'Arvo', serif;
+	font-family: 'Josefin Slab', serif;
 	overflow: hidden;
 	
 
@@ -134,6 +134,8 @@ table {
 	
 }
 
+
+
 #about:before {
  	position: absolute;
     content: '';
@@ -161,15 +163,45 @@ table {
 #aboutText {
 	margin: auto;
 	width: 80%;
+	margin-bottom:3em;
 }
+
+#aboutUser {
+	width:100%;
+	background-color: #F2E5E5;
+	text-align: center;
+	overflow: hidden;
+	float: left;
+	font-family: 'Josefin Slab', serif;
+
+}
+
+#aboutUser p {
+	font-size: 1.5em;
+	margin-top: 1em;
+}
+
+#aboutUser h1 {
+	padding-top:15px;
+	font-size: 2em;
+}
+
+#aboutTextUser {
+	text-align: center;
+	margin: auto;
+	width: 80%;
+	margin-bottom:3em;
+
+}
+
 
 #signInForm {
 	width: 25%;
 	height:100%;
 	background-color: inherit;
 	float: right;
-	border-left-style: solid;
-border-width: 1px;
+	
+	border-width: 1px;
 }
 
 #signInForm:after {
@@ -180,6 +212,7 @@ border-width: 1px;
     width: 100%;
     z-index: -1;
     background-color: #EBF4FB;
+    border-left-style: solid;
 }
 
 #theTeam {
@@ -264,6 +297,7 @@ border-width: 1px;
 	height:550px;
 	background-color:#808080;
 	font-family: 'Arvo', serif;
+	min-height: 600px;
 }
 
 #contentProject h1, #contentProject h2 {

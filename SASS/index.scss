@@ -1,0 +1,310 @@
+@import 'reset';
+
+
+
+body {
+	margin: 0;
+	padding:0;
+box-sizing: border-box;
+}
+*, *:before, *:after {
+box-sizing: inherit;
+}
+
+
+#navbar {
+	width:100%;
+	padding:1em;
+	background-color: #800000;
+	font-family: 'Josefin Slab', serif;
+	overflow: hidden;
+	
+	a {
+	color: white;
+
+		&:hover {
+			color: gray;
+		}
+
+	}
+
+
+	h2 {
+		display: inline;
+		padding-left: 2em;
+		color: white;
+		font-size: 1.3em;
+	}
+
+	ul {
+		display: inline-block;
+		float: right;
+		font-size: 1.3em;
+
+		li {
+		float:left;
+		list-style-type: none;
+		padding-right: 75px;
+		}
+
+	}
+
+
+
+}
+
+
+#slideshow {
+	width:100%;
+	overflow:hidden; 
+
+		img {
+		display:block; /* prevents gapping underneath images displayed inline or inline block, also allows margins */
+		 /* 100% height and width to fill up our #slideshow container */
+		height:475px;
+		margin:auto;
+	}
+}
+
+
+#content {
+	width:100%;
+	overflow: hidden;
+	position: relative;
+	
+	border-style: solid;
+	border-width: 1px;
+	
+}
+
+#about {
+	width: 75%;
+	background-color: #F2E5E5;
+	text-align: center;
+	overflow: hidden;
+	float: left;
+	font-family: 'Josefin Slab', serif;
+
+	&:before {
+ 	position: absolute;
+    content: '';
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+    display: block;
+    background-color: inherit;
+	}
+
+
+
+	p {
+		font-size: 1.5em;
+		margin-top: 1em;
+	}
+
+	h1 {
+		padding-top:15px;
+		font-size: 2em;
+	}
+
+
+	#aboutText {
+		margin: auto;
+		width: 80%;
+		margin-bottom:3em;
+	}
+
+	#aboutUser {
+		width:100%;
+		background-color: #F2E5E5;
+		text-align: center;
+		overflow: hidden;
+		float: left;
+		font-family: 'Josefin Slab', serif;
+
+			p {
+			font-size: 1.5em;
+			margin-top: 1em;
+			}
+
+			h1 {
+			padding-top:15px;
+			font-size: 2em;
+			}
+
+	}
+
+
+
+	#aboutTextUser {
+		text-align: center;
+		margin: auto;
+		width: 80%;
+		margin-bottom:3em;
+
+	}
+
+		
+	
+	
+}
+
+//Sign In Form//
+
+#signInForm {
+	width: 25%;
+	height:100%;
+	background-color: inherit;
+	float: right;
+	border-width: 1px;
+
+	&:after {
+ 	position: absolute;
+    content: '';
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+    background-color: #EBF4FB;
+    border-left-style: solid;
+	}
+}
+
+#stylized {
+   font-family:"Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
+   font-size:12px;
+   background:#ebf4fb;
+
+	   	a {
+	 	text-align: center;
+	 	}
+
+ 		&.spacer{
+ 			clear:both; height:1px;
+ 		}
+ /* ----------- My Form ----------- */
+	 &.myform{
+	   margin:0 auto;
+	   width:320px;
+	   padding:4.5em;
+	   height:100%;
+	   
+	 }
+ 
+   /* ----------- stylized ----------- */
+
+   h1 {
+       font-size:14px;
+       font-weight:bold;
+       margin-bottom:8px;
+       text-align: center;
+   }
+   p{
+       font-size:11px;
+       color:#666666;
+       margin-bottom:20px;
+       border-bottom:solid 1px #b7ddf2;
+       padding-bottom:10px;
+   }
+   label{
+       display:block;
+       font-weight:bold;
+       text-align:right;
+       width:140px;
+       float:left;
+   }
+  	.small{
+       color:#666666;
+ 		display:block;
+       font-size:11px;
+       font-weight:normal;
+       text-align:right;
+       width:140px;
+   }
+   input{
+       float:left;
+       font-size:12px;
+       padding:4px 2px;
+       border:solid 1px #aacfe4;
+       width:200px;
+       height:2em;
+       margin:2px 0 20px 10px;
+   }
+    button{
+       clear:both;
+       margin-left:55px;
+       width:125px;
+       height:31px;
+       background:#666666 url(img/button.png) no-repeat;
+       text-align:center;
+       line-height:31px;
+       color:#FFFFFF;
+       font-size:11px;
+       font-weight:bold;
+   }
+ }
+
+#contact {
+	width:100%;
+	overflow: hidden;
+	padding: 5em 0em;
+	font-family: 'Arvo', serif;
+	background-color: #808080;
+	color:white;
+	background-image: url("../images/tile.jpg");
+
+		h2 {
+		font-size: 2em;
+		padding:.3em;
+		}
+	 
+
+		.half {
+		width: 50%;
+		text-align: center;
+		float: left;
+		height: 100%;
+
+			ul {
+			display:inline-block;
+			padding:0;
+			
+			}
+
+			li {
+			float: left;
+			list-style-type: none;
+			padding-left: 50px;
+			}
+
+			i {
+			font-size: 3em;
+			}
+
+
+		}
+
+
+}
+
+
+
+
+#footer {
+	padding:1.5em;
+	width:100%;
+	background-color: #800000;
+	text-align: center;
+	color:white;
+
+
+	
+}
+
+
+
+
+
+
+	

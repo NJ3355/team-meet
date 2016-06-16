@@ -31,6 +31,33 @@ require_once 'session.php';
     
     echo <<<_END
 
+    <div id="userInfo">
+      <ul>
+        <li><span class="info">Username:</span> $row[4]</li>
+        <li><span class="info">First Name:</span> $row[1]</li>
+        <li><span class="info">Last Name:</span> $row[2]</li>
+        <li><span class="info">E-Mail:</span> $row[3]</li>
+        <li><span class="info">Company:</span> $row[6]</li>
+      </ul>
+    </div>
+
+    
+    
+            
+  
+_END;
+  }
+  
+  $result->close();
+  $conn->close();
+  
+  function get_post($conn, $var)
+  {
+    return $conn->real_escape_string($_POST[$var]);
+  }
+?>
+
+<!--
       <fieldset>
 
       <legend><h1>$row[4]</h1></legend>
@@ -70,21 +97,6 @@ require_once 'session.php';
           <td>PRIVATE</td>
         </tr>
       </table>
-		<button id="showEdit">Edit</button>
+    <button id="showEdit">Edit</button>
     </fieldset>
-
-    
-    
-            
-  
-_END;
-  }
-  
-  $result->close();
-  $conn->close();
-  
-  function get_post($conn, $var)
-  {
-    return $conn->real_escape_string($_POST[$var]);
-  }
-?>
+-->

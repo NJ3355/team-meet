@@ -42,7 +42,7 @@ h2 {
     float: left;
     position: relative;
     overflow: auto;
-   
+   background-image: url("../images/tile.jpg");
 }
 
 #projectInfo {
@@ -72,6 +72,11 @@ h2 {
     width: 100%;
     float:left;
     background-color: #dddbd9;
+    background-image: url("../images/tile.jpg");
+}
+
+#projectName h1 {
+    color:white;
 }
 
 

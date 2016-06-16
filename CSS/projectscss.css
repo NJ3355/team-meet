@@ -56,7 +56,7 @@ table {
 	width:100%;
 	padding:1em;
 	background-color: #800000;
-	font-family: 'Arvo', serif;
+	font-family: 'Josefin Slab', serif;
 	overflow: hidden;
 	
 
@@ -107,7 +107,7 @@ table {
 #contentProject {
 	width:100%;
 	overflow: hidden;
-	
+	min-height: 650px;
 	background-color:#808080;
 	font-family: 'Arvo', serif;
 	background-image: url("../images/tile.jpg");

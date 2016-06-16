@@ -11,11 +11,12 @@
 <title></title>
 
 <link rel="stylesheet" type="text/css" href="CSS/jquery-ui.min.css"/>
-<link rel="stylesheet" type="text/css" href="CSS/projectscss.css"/>
+<link rel="stylesheet" type="text/css" href="CSS/projectssass.css"/>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script type="text/javascript" src="JavaScript/jquery-ui.min.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Josefin+Slab:400,700' rel='stylesheet' type='text/css'>
 
 
 
@@ -53,10 +54,10 @@ $(document).ready(function() {
 
 			<h2>Team - Meet</h2>
 				<ul>
-					<a href="index.html"><li>Home</li></a>
+					<a href="indexUser.html"><li>Home</li></a>
 					<a href="projects.php"><li>My Projects</li></a>
 					<a href="contact.html"><li>Contact</li></a>
-					<!--<a href="userprofile.php"><li>User Profile</li></a>-->
+					<a href="userprofile.php"><li>User Profile</li></a>
 					<a href="php/logout.php"><li>Logout</li></a>
 				</ul>
 	</div>
@@ -72,7 +73,7 @@ $(document).ready(function() {
 		
 	</div>-->
 	<div id="contentProject">
-		<h1><?php echo $_SESSION['username'];?> Projects</h1>
+		<h1 class="title"><?php echo $_SESSION['username'];?> Projects</h1>
 		<div id="button">
 		<button id="show">Create New Project</button>
 		</div>

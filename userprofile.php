@@ -13,6 +13,7 @@ $username = $_SESSION['username'];
 <link rel="stylesheet" type="text/css" href="CSS/jquery-ui.min.css"/>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Josefin+Slab:400,700' rel='stylesheet' type='text/css'>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script type="text/javascript" src="JavaScript/jquery-ui.min.js"></script>
 <script type="text/javascript">
@@ -40,6 +41,8 @@ $( document ).ready(function() {
 		width: 80%;
 		margin: auto;
 		padding: auto;
+		overflow:hidden;
+		
 	}
 	table {
 		margin: auto;
@@ -48,9 +51,56 @@ $( document ).ready(function() {
 	td {
 		text-align: center;
 	}
+
+	#buttonWrapper {
+		margin:auto;
+	}
 	button {
 		margin: auto;
 	}
+
+	h1 {
+		font-size:2.5em;
+		display: inline-block;
+		margin-left: 1em;
+	}
+
+	img {
+		width:254px;
+		height:200px;
+	}
+
+	#container {
+		background-image: url("images/tile.jpg");
+		min-height: 650px;
+		color: white;
+	}
+
+	#userHeader {
+		width:80%;
+		margin-top:1em;
+	    display:flex;
+        align-items: center;
+        justify-content: center;
+	}
+
+	#userInfo {
+
+		width:25%;
+		margin: auto;
+		margin-top:3em;
+
+	}
+
+	#userInfo li {
+		margin-bottom: 2em;
+
+	}
+
+	.info {
+		font-size: 2em;
+	}
+
 </style>
 </head>
 <body>
@@ -59,21 +109,25 @@ $( document ).ready(function() {
 	<div id="navbar">
 			<h2>Team - Meet</h2>
 				<ul>
-					<a href="index.html"><li>Home</li></a>
+					<a href="indexUser.html"><li>Home</li></a>
 					<a href="projects.php"><li>My Projects</li></a>
 					<a href="contact.html"><li>Contact</li></a>
 					<a href="userprofile.php"><li>User Profile</li></a>
 					<a href="php/logout.php"><li>Logout</li></a>
 				</ul>
 	</div>
-	
-	<div id="header">
-		<div id="slideshow">
-			<img src ="images/team.jpg" />   
-		</div>
+	<div id="userProfile">
+		<div id="userHeader">
+			<div id="testing">
+				<img src="images/portrait.jpg" /><br/>
+				<button id="showEdit">Edit Profile</button>
+				<button id="showEdit">Upload Image</button>
+			</div>
+			<h1><?php echo $_SESSION['firstname']; echo " "; echo $_SESSION['lastname'];?></h1>
+	    </div>
+	    <?php include "php/listuserprofile.php"; ?>
 	</div>
 	
-	<div id="userProfile">
 		<div id="edit">
 			<form method="post" action="php/edituserprofile.php" onsubmit="return validate(this)">
 				<label for="fname2">First Name</label><br />
@@ -89,14 +143,16 @@ $( document ).ready(function() {
 				<button type="submit">Update</button>
 			</form>
 		</div>
-		<?php include "php/listuserprofile.php"; ?>
-	</div>
-	
-	<div id="footer">
 		
 	</div>
 	
-</div>
 
+	
+
+
+
+	<div id="footer">
+		
+	</div>
 </body>
 </html>

@@ -35,6 +35,33 @@ _END;
   
   $result->close();
   $conn->close();
+
+  $conn = new mysqli($db_hostname, $db_username, $db_password, $db_database);  if ($conn->connect_error) die($conn->connect_error);
+
+  $query  = "SELECT * FROM user_profile where username = '$username'";
+  $result = $conn->query($query);
+  if (!$result) die ("Database access failed: " . $conn->error);
+
+  $rows = $result->num_rows;
+
+
+  
+  for ($j = 0 ; $j < $rows ; ++$j)
+  {
+    $result->data_seek($j);
+    $row = $result->fetch_array(MYSQLI_NUM);
+
+    $_SESSION['firstname'] = $row[1];
+
+    $_SESSION['lastname'] = $row[2];
+ 
+    $_SESSION['email'] = $row[1];
+  
+  
+  }
+  
+  $result->close();
+  $conn->close();
   
   function get_post($conn, $var)
   {
